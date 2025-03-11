@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4169e1;
+    color: white;
+    padding: 10px 20px;
+}
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.join-btn {
+    background: orange;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.left-ads, .right-ads {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ad, .top-banner-ad, .bottom-banner-ad {
+    background: #f4a261;
+    padding: 20px;
+    margin: 10px;
+}
+.player-container {
+    background: #f4c542;
+    padding: 20px;
+    border-radius: 15px;
+}
