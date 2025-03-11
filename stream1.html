@@ -1,38 +1,58 @@
-<!-- stream1.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
     <title>Live Stream</title>
+    <link rel="icon" href="https://img.freepik.com/free-vector/creative-computer-logo-template_23-2149213537.jpg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
-    <script src="player.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="menu-icon">☰</div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <h1>Live Stream 📺</h1>
-        <a href="https://t.me/yourchannel" target="_blank" class="join-btn">Join</a>
+        <a class="join-btn" href="https://telegram.me/live_Cricket_steam" target="_blank">Join</a>
     </header>
-    
-    <div class="container">
-        <div class="left-ads">
-            <div class="ad">Left_AD_1</div>
-            <div class="ad">Left_AD_2</div>
-        </div>
-        <div class="center">
-            <div class="top-banner-ad">Top_Banner_AD</div>
-            <div class="player-container">
-                <div id="jwplayer1"></div>
+
+    <!-- Sidebar Menu -->
+    <nav id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Future Options</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="site-content">
+        <div class="content-container">
+            
+            <div class="side-ad">Left_AD_1</div>
+            <div class="side-ad">Left_AD_2</div>
+
+            <div class="main-content">
+                <div class="top-banner-ad">Top_Banner_AD</div>
+                <div id="player-container">Video Player Loading...</div>
+                <div class="bottom-banner-ad">Bottom_Banner_AD</div>
             </div>
-            <div class="bottom-banner-ad">Bottom_Banner_AD</div>
-        </div>
-        <div class="right-ads">
-            <div class="ad">Right_AD_1</div>
-            <div class="ad">Right_AD_2</div>
+
+            <div class="side-ad">Right_AD_1</div>
+            <div class="side-ad">Right_AD_2</div>
+
         </div>
     </div>
+
+    <!-- Telegram Floating Button -->
+    <div class="telegram-button">
+        <a href="https://telegram.me/live_Cricket_steam" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Join Telegram" />
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="player.js"></script>
+
 </body>
 </html>
