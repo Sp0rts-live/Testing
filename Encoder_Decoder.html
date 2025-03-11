@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder & Decoder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .copy-btn {
+            background: #28a745;
+        }
+        .copy-btn:hover {
+            background: #218838;
+        }
+        .output-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            word-wrap: break-word;
+            min-height: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        .output-text {
+            flex: 1;
+            word-break: break-word;
+            text-align: left;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Base64 Encoder & Decoder</h2>
+
+    <!-- Encoder Section -->
+    <div class="container">
+        <h3>🔐 Base64 Encoder</h3>
+        <label>Enter M3U8 URL:</label>
+        <input type="text" id="m3u8Input" placeholder="https://example.com/stream.m3u8">
+        <button onclick="encodeBase64()">Encode</button>
+        <h4>Encoded Base64:</h4>
+        <div class="output-container">
+            <span id="encodedOutput" class="output-text">---</span>
+            <button class="copy-btn" onclick="copyToClipboard('encodedOutput')">📋 Copy</button>
+        </div>
+    </div>
+
+    <!-- Decoder Section -->
+    <div class="container">
+        <h3>🔓 Base64 Decoder</h3>
+        <label>Enter Base64 String:</label>
+        <input type="text" id="base64Input" placeholder="Enter Base64 string here">
+        <button onclick="decodeBase64()">Decode</button>
+        <h4>Decoded M3U8 URL:</h4>
+        <div class="output-container">
+            <span id="decodedOutput" class="output-text">---</span>
+            <button class="copy-btn" onclick="copyToClipboard('decodedOutput')">📋 Copy</button>
+        </div>
+    </div>
+
+    <script>
+        function encodeBase64() {
+            const input = document.getElementById("m3u8Input").value.trim();
+            if (!input) {
+                alert("Please enter an M3U8 URL.");
+                return;
+            }
+            const encoded = btoa(input);
+            document.getElementById("encodedOutput").innerText = encoded;
+        }
+
+        function decodeBase64() {
+            const encodedInput = document.getElementById("base64Input").value.trim();
+            if (!encodedInput) {
+                alert("Please enter a Base64 string.");
+                return;
+            }
+            try {
+                const decoded = atob(encodedInput);
+                document.getElementById("decodedOutput").innerText = decoded;
+            } catch (error) {
+                alert("Invalid Base64 string!");
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            if (text === "---") {
+                alert("Nothing to copy!");
+                return;
+            }
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>
