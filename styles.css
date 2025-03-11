@@ -1,14 +1,11 @@
 /* General Styles */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     color: white;
     text-align: center;
-    font-family: Arial, sans-serif;       
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
