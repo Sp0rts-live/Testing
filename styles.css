@@ -114,6 +114,19 @@ body {
     margin: 10px 0;
 }
 
+.bottom-Bigg-ad {
+    width: 900px;
+    height: 90px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
 #player-container {
     border: 3px solid #ff9800;
     border-radius: 10px;
