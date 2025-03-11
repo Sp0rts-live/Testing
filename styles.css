@@ -1,47 +1,142 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
     text-align: center;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
-header {
+
+/* Header */
+.header {
+    background-color: #0055a5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #4169e1;
-    color: white;
     padding: 10px 20px;
+    color: white;
 }
-.menu-icon {
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
     font-size: 24px;
     cursor: pointer;
 }
+
 .join-btn {
     background: orange;
-    padding: 8px 15px;
-    border-radius: 10px;
+    padding: 10px 20px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    border-radius: 5px;
 }
-.container {
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Content Layout */
+.site-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
-}
-.left-ads, .right-ads {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
+    margin-top: 20px;
 }
-.ad, .top-banner-ad, .bottom-banner-ad {
-    background: #f4a261;
-    padding: 20px;
+
+.content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.side-ad {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
     margin: 10px;
 }
-.player-container {
-    background: #f4c542;
-    padding: 20px;
-    border-radius: 15px;
+
+.main-content {
+    flex-grow: 1;
+    max-width: 900px;
+}
+
+.top-banner-ad, .bottom-banner-ad {
+    width: 900px;
+    height: 90px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#player-container {
+    border: 3px solid #ff9800;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Telegram Floating Button */
+.telegram-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0088cc;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.telegram-button img {
+    width: 50px;
+    height: 50px;
 }
