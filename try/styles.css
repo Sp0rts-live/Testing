@@ -124,7 +124,7 @@ body {
 .content-container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1024px;
 }
 
 .ad1 {
@@ -180,7 +180,7 @@ body {
 
 .main-content {
     flex-grow: 1;
-    max-width: 900px;
+    max-width: 728px;
 }
 
 .top-banner-ad {
