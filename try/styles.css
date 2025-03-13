@@ -17,8 +17,10 @@ body {
     align-items: center;
     padding: 10px 20px;
     color: white;
+    flex-wrap: wrap; /* Allows items to wrap in mobile */
 }
 
+/* Menu Button */
 .menu-btn {
     background: none;
     border: none;
@@ -27,7 +29,7 @@ body {
     cursor: pointer;
 }
 
-/* From Uiverse.io by fanishah */ 
+/* Telegram Button */
 .button {
   font-family: inherit;
   background: #2CA0D9;
@@ -39,7 +41,6 @@ body {
   letter-spacing: 0.08em;
   position: relative;
   display: flex;
-  align-content: center;
   align-items: center;
   overflow: hidden;
   height: 2.5em;
@@ -76,7 +77,6 @@ body {
   width: calc(100% - 0.85rem);
   border-radius: 0.5em;
 }
-
 
 /* Sidebar */
 .sidebar {
@@ -194,10 +194,46 @@ body {
 }
 
 .telegram-button:hover {
-        transform: scale(1.1);
-    }
+    transform: scale(1.1);
+}
 
 .telegram-button img {
     width: 50px;
     height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack elements on small screens */
+        text-align: center;
+    }
+
+    .menu-btn {
+        order: -1; /* Move menu button to top */
+        margin-bottom: 10px;
+    }
+
+    .button {
+        margin-top: 10px; /* Adjust spacing */
+        align-self: center;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ad {
+        width: 100%;
+        height: auto;
+    }
+
+    .top-banner-ad, .bottom-banner-ad, .bottom-bigg-ad {
+        width: 100%;
+    }
+
+    #player-container {
+        width: 100%;
+    }
 }
