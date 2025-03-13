@@ -127,7 +127,45 @@ body {
     max-width: 1200px;
 }
 
-.ad {
+.ad1 {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
+}
+.ad2 {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.ad3 {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.ad4 {
     width: 150px;
     height: 400px;
     background: #333;
@@ -145,8 +183,21 @@ body {
     max-width: 900px;
 }
 
-.top-banner-ad, .bottom-banner-ad {
-    width: 900px;
+.top-banner-ad {
+    width: 728px;
+    height: 90px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.bottom-banner-ad {
+    width: 728px;
     height: 90px;
     background: #333;
     color: white;
