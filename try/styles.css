@@ -31,51 +31,51 @@ body {
 
 /* Telegram Button */
 .button {
-    font-family: inherit;
-    background: #2CA0D9;
-    color: white;
-    padding: 0.35em 0;
-    font-size: 17px;
-    border: none;
-    border-radius: 0.7em;
-    letter-spacing: 0.08em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    height: 2.5em;
-    padding-left: 2.8em;
-    padding-right: 0.92em;
+  font-family: inherit;
+  background: #2CA0D9;
+  color: white;
+  padding: 0.35em 0;
+  font-size: 17px;
+  border: none;
+  border-radius: 0.7em;
+  letter-spacing: 0.08em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 2.5em;
+  padding-left: 2.8em;
+  padding-right: 0.92em;
 }
 
 .button .icon {
-    background: #fff;
-    height: 2em;
-    width: 2em;
-    border-radius: 2em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0.4em;
-    transition: all 0.5s;
+  background: #fff;
+  height: 2em;
+  width: 2em;
+  border-radius: 2em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0.4em;
+  transition: all 0.5s;
 }
 
 .icon svg {
-    margin-left: 0.1em;
-    transition: all 0.5s;
-    color: #2CA0D9;
-    width: 1.2rem;
-    height: 1.2rem;
+  margin-left: 0.1em;
+  transition: all 0.5s;
+  color: #2CA0D9;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .button:hover .icon svg {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .button:hover .icon {
-    width: calc(100% - 0.85rem);
-    border-radius: 0.5em;
+  width: calc(100% - 0.85rem);
+  border-radius: 0.5em;
 }
 
 /* Sidebar */
@@ -125,20 +125,9 @@ body {
     display: flex;
     width: 100%;
     max-width: 1200px;
-    justify-content: center; /* Ensures center alignment */
-    align-items: flex-start; /* Aligns content properly */
-    gap: 10px; /* Reduces space between elements */
 }
 
-/* Left & Right Ad Sections */
-.side-ad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px; /* Fixed width */
-}
-
-.ad1, .ad2, .ad3, .ad4 {
+.ad1 {
     width: 150px;
     height: 400px;
     background: #333;
@@ -148,20 +137,55 @@ body {
     justify-content: center;
     border: 2px solid #ff9800;
     border-radius: 5px;
-    margin: 5px 0; /* Reduced margin */
+    margin: 10px;
+}
+.ad2 {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-/* Main Content Section */
+.ad3 {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.ad4 {
+    width: 150px;
+    height: 400px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px;
+}
+
 .main-content {
     flex-grow: 1;
     max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.top-banner-ad, .bottom-banner-ad, .bottom-bigg-ad {
+.top-banner-ad {
     width: 728px;
+    height: 90px;
     background: #333;
     color: white;
     display: flex;
@@ -172,16 +196,30 @@ body {
     margin: 10px 0;
 }
 
-.top-banner-ad {
-    height: 90px;
-}
-
 .bottom-banner-ad {
+    width: 728px;
     height: 90px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 .bottom-bigg-ad {
+    width: 728px;
     height: 150px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 #player-container {
@@ -237,8 +275,9 @@ body {
         align-items: center;
     }
 
-    .side-ad {
-        display: none; /* Hide side ads on small screens */
+    .ad {
+        width: 100%;
+        height: auto;
     }
 
     .top-banner-ad, .bottom-banner-ad, .bottom-bigg-ad {
