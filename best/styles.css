@@ -124,7 +124,7 @@ body {
 .content-container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1024px;
 }
 
 .left_ad-container {
