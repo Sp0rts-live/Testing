@@ -12,13 +12,16 @@ body {
 .header {
     background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     color: white;
-    flex-wrap: wrap; /* Allows items to wrap in mobile */
+    flex-wrap: wrap;
+    max-width: 1200px;  /* Match site-content width */
+    margin: 0 auto;  /* Center align */
+    width: 100%;
 }
+
 
 /* Menu Button */
 .menu-btn {
