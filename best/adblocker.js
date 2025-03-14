@@ -1,12 +1,34 @@
+const detect = document.querySelector('#detect');
+const wrapper = document.querySelector('.wrapper');
+const button = wrapper.querySelector('button');
 
-           // Initialize the BlockAdBlock library
-           var blocker = new BlockAdBlock({
-               checkOnLoad: true,  // Check for ad blockers when the page loads
-               resetOnEnd: true    // Reset the detection after it's been triggered once
-           });
-
-           // Define actions to be taken when an ad blocker is detected
-           blocker.onDetected(function() {
-               // Display a message to the user or take other actions
-               alert('It seems you have an ad blocker enabled. Please consider disabling it to support our website.');
-           });
+let adClasses = [
+  'ad',
+  'ads',
+  'adsbox',
+  'doubleclick',
+  'ad-placement',
+  'ad-placeholder',
+  'adbadge',
+  'BannerAd',
+];
+for (let item of adClasses) {
+  detect.classList.add(item);
+}
+let getProperty = window.getComputedStyle(detect).getPropertyValue('display');
+console.log(window.getComputedStyle(detect));
+if (!wrapper.classList.contains('show')) {
+  getProperty == 'none'
+    ? wrapper.classList.add('show')
+    : wrapper.classList.remove('show');
+}
+button.addEventListener('click', () => {
+  wrapper.classList.remove('show');
+  setTimeout(function () {
+    if (!wrapper.classList.contains('show')) {
+      getProperty == 'none'
+        ? wrapper.classList.add('show')
+        : wrapper.classList.remove('show');
+    }
+  }, 2000);
+});
