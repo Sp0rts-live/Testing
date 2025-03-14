@@ -115,7 +115,7 @@ body {
 /* Content Layout */
 .site-content {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
