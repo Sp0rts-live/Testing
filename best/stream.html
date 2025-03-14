@@ -191,6 +191,13 @@
         </div>
     </div>
     <!-- Anti-Adblock Popup -->
+
+     <div id="adblock-warning">
+        <h1>Ad Blocker Detected!</h1>
+        <p>Please disable your ad blocker to access our content.</p>
+        <button class="btn" onclick="location.reload()">I Disabled AdBlock</button>
+    </div>
+    
 <div class="adb" id="adb" style="display: none;">
     <div class="adbs">
         <h3>Adblock Detected</h3>
@@ -223,6 +230,23 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Join Telegram" />
         </a>
     </div>
+            <script>
+        function detectAdBlock() {
+            let adDiv = document.createElement("div");
+            adDiv.className = "ad-container";
+            document.body.appendChild(adDiv);
+            
+            setTimeout(() => {
+                if (adDiv.offsetHeight === 0 || getComputedStyle(adDiv).display === "none") {
+                    document.getElementById("adblock-warning").style.display = "flex";
+                } else {
+                    document.getElementById("main-content").style.display = "block";
+                }
+                adDiv.remove();
+            }, 500);
+        }
+        window.onload = detectAdBlock;
+    </script>
 
     <script src="abd.js"></script>
     <script src="script.js"></script>
