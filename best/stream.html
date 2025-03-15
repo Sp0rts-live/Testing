@@ -6,6 +6,7 @@
     <title>Live Stream</title>
     <link rel="icon" href="https://img.freepik.com/free-vector/creative-computer-logo-template_23-2149213537.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/Testing/best/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
 </head>
@@ -199,40 +200,38 @@
     </div>
 
     <!-- AD_Blocker -->
-<div class='adblcr' id='superadblocker'>
-        <div class='textsshow'>
-            <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <circle cx='12' cy='12' r='10'/>
-                <line x1='12' x2='12' y1='8' y2='12'/>
-                <line x1='12' x2='12.01' y1='16' y2='16'/>
-            </svg>
-            <h2>Ad-Blocker Detected!</h2>
-            <p>⚠️ Please disable your Ad-Blocker to access our content. It helps us maintain this website. Thank you!</p>
-            <a href='/' style="text-decoration: none; font-size: 20px;">🔃 Reload</a>
-        </div>
+ <div id="detect"></div>
+  <div class="wrapper">
+    <div class="content">
+      <div class="warn-icon">
+        <span class="icon"><i class="fas fa-exclamation"></i></span>
+      </div>
+      <h2>AdBlock Detected!</h2>
+      <p>Our website is made possible by displaying ads to our visitors. Please supporting us by whitelisting our website.</p>
+      <div class="btn">
+        <div class="bg-layer"></div>
+        <button>Okay, I'll Whitelist</button>
+      </div>
     </div>
+  </div>
+ <script>
+    const detect = document.querySelector("#detect");
+    const wrapper = document.querySelector(".wrapper");
+    const button = wrapper.querySelector("button");
 
-    <script>
-        function detectAdBlock() {
-            let adDiv = document.createElement("div");
-            adDiv.className = "adsbygoogle";
-            adDiv.style.width = "1px";
-            adDiv.style.height = "1px";
-            adDiv.style.position = "absolute";
-            adDiv.style.left = "-9999px";
-            document.body.appendChild(adDiv);
+    let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
+    for(let item of adClasses){
+      detect.classList.add(item);
+    }
+    let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
+    if(!wrapper.classList.contains("show")){
+      getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
+    }
+    button.addEventListener("click", ()=>{
+      wrapper.classList.remove("show");
+    });
+  </script>
 
-            setTimeout(() => {
-                if (adDiv.offsetHeight === 0 || getComputedStyle(adDiv).display === "none") {
-                    document.getElementById("superadblocker").style.display = "flex";
-                }
-                adDiv.remove();
-            }, 500);
-        }
-
-        window.onload = detectAdBlock;
-    </script>
-    
     <script src="/Channel/assets/script.js"></script>
     <script src="/Channel/assets/player.js"></script>
 <script type='text/javascript' src='//rancidmorsel.com/81/68/79/816879ecf9510ed359080ab77e1d5c48.js'></script>
