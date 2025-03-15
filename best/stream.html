@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+    <style type='text/css'>
+  /* Animation */
+  @keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}@keyframes rubberBand{from{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,0.75,1)}40%{transform:scale3d(0.75,1.25,1)}50%{transform:scale3d(1.15,0.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}to{transform:scale3d(1,1,1)}}#arlinablock{background:rgba(0,0,0,0.65);position:fixed;margin:auto;left:0;right:0;top:0;bottom:0;overflow:auto;z-index:999999;animation:fadeInDown 1s}#arlinablock .header{margin:0 0 15px}#arlinablock .inner{background:#E74C3C;color:#fff;box-shadow:0 5px 20px rgba(0,0,0,0.1);text-align:center;width:600px;padding:40px;border-radius:5px;margin:7% auto 2%;animation:rubberBand 1s}#arlinablock button{padding:10px 20px;border:0;background:rgba(0,0,0,0.15);color:#fff;margin:20px 5px;cursor:pointer;transition:all .3s}#arlinablock button:hover{background:rgba(0,0,0,0.35);color:#fff;outline:none}#arlinablock button.active,#arlinablock button:hover.active{background:#fff;color:#222;outline:none}#arlinablock .fixblock{background:#fff;text-align:left;color:#000;padding:20px;height:250px;overflow:auto;line-height:30px}#arlinablock .fixblock div{display:none}#arlinablock .fixblock div.active{display:block}#arlinablock ol{margin-left:20px}@media(max-width:768px){#arlinablock .inner{width:calc(100% - 20px);margin:10px auto;padding:15px}}.inner h2{color: whitesmoke;text-shadow: black;}
+</style>
 </head>
 <body>
 
@@ -199,17 +203,6 @@
         </a>
     </div>
 
-    <!-- AD_Blocker -->
-    <div id="arlinablock">
-    <div class="inner">
-        <h2>Ad Blocker Detected!</h2>
-        <p>Please disable your ad blocker to support our site.</p>
-        <button onclick="location.reload()">I have disabled AdBlock</button>
-    </div>
-</div>
-
- 
-
     <script src="/Channel/assets/script.js"></script>
     <script src="/Channel/assets/player.js"></script>
 <script type='text/javascript' src='//rancidmorsel.com/81/68/79/816879ecf9510ed359080ab77e1d5c48.js'></script>
@@ -220,33 +213,14 @@
                               var slot1 = _shareustag.defineAutoAdSlot('/shareus-admanager/7167243183/rNZLJXmIYO/auto ad');
                             });
                           </script>
-
-    <div class='popSc hidden' id='antiAdBlock'>
-  <div class='popBo'>
-    <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10'/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/></svg>
-    <h2>Ad-Blocker Detected!</h2>
-    <p>Sorry, we detected that you have activated Ad-Blocker.<br/>Please consider supporting us by disabling your Ad-Blocker, it helps us in developing this Website.<br/>Thank you!</p>
-  </div>
-</div>
-   <script>/<![CDATA[/ /* Anti Ad-Blocker Script by Fineshop (Lazyload) / var lazyAnti=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyAnti||0!=document.body.scrollTop&&!1===lazyAnti)&&(!function(){var antiAdBlock=document.querySelector("#antiAdBlock");var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";e.onerror=function(){if(antiAdBlock!=null){antiAdBlock.classList.remove("hidden");window.lazyAnti=!0}};var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyAnti=!0)},!0); /]]>*/</script> 
- 
-    <script>
-    window.onload = function() {
-        setTimeout(function() {
-            let adTest = document.createElement('div');
-            adTest.innerHTML = '&nbsp;';
-            adTest.className = 'adsbox';
-            document.body.appendChild(adTest);
-
-            window.setTimeout(function() {
-                if (adTest.offsetHeight === 0) {
-                    document.getElementById("arlinablock").style.display = "flex";
-                }
-                adTest.remove();
-            }, 100);
-        }, 3000);
-    };
 </script>
+
+    <script type='text/javascript'>
+      //<![CDATA[
+      // Say Hi to Adblock
+      function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/Arlina-Design/quasar@master/arlinablock.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+      //]]>
+      </script>
   
 </body>
 </html>
