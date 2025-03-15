@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=1024">
     <title>Live Stream</title>
     <link rel="icon" href="https://img.freepik.com/free-vector/creative-computer-logo-template_23-2149213537.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="/Testing/best/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/blockadblock/dist/blockadblock.js"></script>
+    <link rel="stylesheet" href="/Channel/assets/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
 </head>
@@ -29,6 +28,7 @@
 
     <!-- Sidebar Menu -->
     <nav id="sidebar" class="sidebar">
+        <button id="overlay" class="overlay" onclick="toggleMenu()"></button>
         <button class="close-btn" onclick="toggleMenu()">×</button>
         <ul>
             <li><a href="https://sp0rts-live.github.io/Channel">About</a></li>
@@ -190,27 +190,7 @@
             </div>
         </div>
     </div>
-    
-    <!-- Anti-Adblock Popup -->
-<div id="detect"></div>
-    <div class="wrapper">
-      <div class="content">
-        <div class="warn-icon">
-          <span class="icon"><i class="fas fa-exclamation"></i></span>
-        </div>
-        <h2>Please allow ads on our site🥺</h2>
-        <p>
-          Looks like you're using an ad blocker. We depend on advertising to help fund our website. Please whitelist us if you like our content.
-        </p>
-        <div class="btn">
-          <div class="bg-layer"></div>
-          <button>Allow ads</button>
-        </div>
-      </div>
-    </div>
-  
 
-    
     <!-- Telegram Floating Button -->
     <div class="telegram-button">
         <a href="https://telegram.me/live_Cricket_steam" target="_blank">
@@ -218,26 +198,40 @@
         </a>
     </div>
 
-    <div id="detect"></div>
-    <div class="wrapper">
-      <div class="content">
-        <div class="warn-icon">
-          <span class="icon"><i class="fas fa-exclamation"></i></span>
-        </div>
-        <h2>Please allow ads on our site🥺</h2>
-        <p>
-          Looks like you're using an ad blocker. We depend on advertising to help fund our website. Please whitelist us if you like our content.
-        </p>
-        <div class="btn">
-          <div class="bg-layer"></div>
-          <button>Allow ads</button>
-        </div>
-      </div>
-    </div>
-            
+    <!-- AD_Blocker -->
+    <div class='adblcr hidden' id='superadblocker'>
 
-    <script src="/Testing/best/abd.js"></script>
+  <div class='textsshow'>
+
+    <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10'/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/></svg>
+
+    <h2>Ad-Blocker Detected!</h2>
+
+    <p>ad blocker detected &#9888;&#65039;.<br/>Please consider disabling your Ad-Blocker to enjoy our website content, it helps us in developing this Website.<br/>Thank you!!</p>
+<a href='/'>🔃</a>
+  </div>
+
+</div>
+<style>
+.adblcr{position:fixed;z-index:99999;top:0;bottom:0;left:0;right:0;padding:20px;background:#f3f5fe;display:flex;justify-content:center;align-items:center}
+
+.adblcr.hidden{display:none}
+
+.adblcr .textsshow{position:relative;background:#fff;max-width:400px;display:flex;justify-content:center;align-items:center;flex-direction:column;padding:30px;border-radius:30px}
+
+.adblcr .textsshow svg{display:block;width:50px;height:50px;fill:none !important;stroke:#08102b;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+
+.adblcr .textsshow h2{margin:10px 0 15px 0;font-size:1.2rem;font-weight:800;color:#08102b}
+
+.adblcr .textsshow p{margin:0;line-height:1.7em;font-size:0.9rem;color:#08102b}
+
+</style>
+
+<script>/<![CDATA[/ /* Anti Ad-Blocker Script by dk technozone.in / var lazyAnti=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyAnti||0!=document.body.scrollTop&&!1===lazyAnti)&&(!function(){var superadblocker=document.querySelector("#superadblocker");var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";e.onerror=function(){if(superadblocker!=null){superadblocker.classList.remove("hidden");window.lazyAnti=!0}};var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyAnti=!0)},!0); /]]>*/</script>
+
     <script src="/Channel/assets/script.js"></script>
+    <script src="/Channel/assets/player.js"></script>
+<script type='text/javascript' src='//rancidmorsel.com/81/68/79/816879ecf9510ed359080ab77e1d5c48.js'></script>
     <script type="module" src="https://securepubads.shareus.io/scripts/tag/js/gpt.js" ></script>
                          <script>
                              window._shareustag = window._shareustag || {cmd:[]};
@@ -245,6 +239,6 @@
                               var slot1 = _shareustag.defineAutoAdSlot('/shareus-admanager/7167243183/rNZLJXmIYO/auto ad');
                             });
                           </script>
-    <script type='text/javascript' src='//rancidmorsel.com/81/68/79/816879ecf9510ed359080ab77e1d5c48.js'></script>
+    
 </body>
 </html>
