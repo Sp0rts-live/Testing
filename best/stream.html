@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=1024">
     <title>Live Stream</title>
     <link rel="icon" href="https://img.freepik.com/free-vector/creative-computer-logo-template_23-2149213537.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Testing/best/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/blockadblock/dist/blockadblock.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
@@ -190,22 +190,27 @@
             </div>
         </div>
     </div>
-    <!-- Anti-Adblock Popup -->
-
-     <div id="adblock-warning">
-        <h1>Ad Blocker Detected!</h1>
-        <p>Please disable your ad blocker to access our content.</p>
-        <button class="btn" onclick="location.reload()">I Disabled AdBlock</button>
-    </div>
     
-<div class="adb" id="adb" style="display: none;">
-    <div class="adbs">
-        <h3>Adblock Detected</h3>
-        <p>Please disable adblock to proceed to the destination page</p>
+    <!-- Anti-Adblock Popup -->
+<div id="detect"></div>
+    <div class="wrapper">
+      <div class="content">
+        <div class="warn-icon">
+          <span class="icon"><i class="fas fa-exclamation"></i></span>
+        </div>
+        <h2>Please allow ads on our site🥺</h2>
+        <p>
+          Looks like you're using an ad blocker. We depend on advertising to help fund our website. Please whitelist us if you like our content.
+        </p>
+        <div class="btn">
+          <div class="bg-layer"></div>
+          <button>Allow ads</button>
+        </div>
+      </div>
     </div>
-</div>
   
 
+    
     <!-- Telegram Floating Button -->
     <div class="telegram-button">
         <a href="https://telegram.me/live_Cricket_steam" target="_blank">
@@ -229,46 +234,10 @@
         </div>
       </div>
     </div>
-            <script>
-      const detect = document.querySelector('#detect');
-const wrapper = document.querySelector('.wrapper');
-const button = wrapper.querySelector('button');
+            
 
-let adClasses = [
-  'ad',
-  'ads',
-  'adsbox',
-  'doubleclick',
-  'ad-placement',
-  'ad-placeholder',
-  'adbadge',
-  'BannerAd',
-];
-for (let item of adClasses) {
-  detect.classList.add(item);
-}
-let getProperty = window.getComputedStyle(detect).getPropertyValue('display');
-console.log(window.getComputedStyle(detect));
-if (!wrapper.classList.contains('show')) {
-  getProperty == 'none'
-    ? wrapper.classList.add('show')
-    : wrapper.classList.remove('show');
-}
-button.addEventListener('click', () => {
-  wrapper.classList.remove('show');
-  setTimeout(function () {
-    if (!wrapper.classList.contains('show')) {
-      getProperty == 'none'
-        ? wrapper.classList.add('show')
-        : wrapper.classList.remove('show');
-    }
-  }, 2000);
-});
-    </script>
-
-    <script src="abd.js"></script>
-    <script src="script.js"></script>
-    <script src="player.js"></script>
+    <script src="/Testing/best/abd.js"></script>
+    <script src="/Channel/assets/script.js"></script>
     <script type="module" src="https://securepubads.shareus.io/scripts/tag/js/gpt.js" ></script>
                          <script>
                              window._shareustag = window._shareustag || {cmd:[]};
