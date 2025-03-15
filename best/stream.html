@@ -200,37 +200,7 @@
     </div>
 
     <!-- AD_Blocker -->
- <div id="detect"></div>
-  <div class="wrapper">
-    <div class="content">
-      <div class="warn-icon">
-        <span class="icon"><i class="fas fa-exclamation"></i></span>
-      </div>
-      <h2>AdBlock Detected!</h2>
-      <p>Our website is made possible by displaying ads to our visitors. Please supporting us by whitelisting our website.</p>
-      <div class="btn">
-        <div class="bg-layer"></div>
-        <button>Okay, I'll Whitelist</button>
-      </div>
-    </div>
-  </div>
- <script>
-    const detect = document.querySelector("#detect");
-    const wrapper = document.querySelector(".wrapper");
-    const button = wrapper.querySelector("button");
-
-    let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
-    for(let item of adClasses){
-      detect.classList.add(item);
-    }
-    let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
-    if(!wrapper.classList.contains("show")){
-      getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
-    }
-    button.addEventListener("click", ()=>{
-      wrapper.classList.remove("show");
-    });
-  </script>
+ 
 
     <script src="/Channel/assets/script.js"></script>
     <script src="/Channel/assets/player.js"></script>
@@ -242,6 +212,15 @@
                               var slot1 = _shareustag.defineAutoAdSlot('/shareus-admanager/7167243183/rNZLJXmIYO/auto ad');
                             });
                           </script>
+
+    <div class='popSc hidden' id='antiAdBlock'>
+  <div class='popBo'>
+    <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10'/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/></svg>
+    <h2>Ad-Blocker Detected!</h2>
+    <p>Sorry, we detected that you have activated Ad-Blocker.<br/>Please consider supporting us by disabling your Ad-Blocker, it helps us in developing this Website.<br/>Thank you!</p>
+  </div>
+</div>
+   <script>/<![CDATA[/ /* Anti Ad-Blocker Script by Fineshop (Lazyload) / var lazyAnti=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyAnti||0!=document.body.scrollTop&&!1===lazyAnti)&&(!function(){var antiAdBlock=document.querySelector("#antiAdBlock");var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";e.onerror=function(){if(antiAdBlock!=null){antiAdBlock.classList.remove("hidden");window.lazyAnti=!0}};var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyAnti=!0)},!0); /]]>*/</script> 
     
 </body>
 </html>
